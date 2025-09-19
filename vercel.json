@@ -1,15 +1,5 @@
 {
   "rewrites": [
-    { "source": "/site1/(.*)", "destination": "/index.html" },
-    { "source": "/site2/(.*)", "destination": "/index.html" },
-    { "source": "/site3/(.*)", "destination": "/index.html" },
-    { "source": "/site4/(.*)", "destination": "/index.html" },
-    { "source": "/site5/(.*)", "destination": "/index.html" },
-    { "source": "/site6/(.*)", "destination": "/index.html" },
-    { "source": "/site7/(.*)", "destination": "/index.html" },
-    { "source": "/site8/(.*)", "destination": "/index.html" },
-    { "source": "/site9/(.*)", "destination": "/index.html" },
-    { "source": "/site10/(.*)", "destination": "/index.html" },
-    { "source": "/admin/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
