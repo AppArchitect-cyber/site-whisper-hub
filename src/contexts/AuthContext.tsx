@@ -13,13 +13,21 @@ interface AuthContextType {
   signOut: () => Promise<void>;
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+// Create default context value to prevent undefined errors
+const defaultContextValue: AuthContextType = {
+  user: null,
+  session: null,
+  isAdmin: false,
+  loading: true,
+  signIn: async () => ({ error: new Error('AuthProvider not initialized') }),
+  signUp: async () => ({ error: new Error('AuthProvider not initialized') }),
+  signOut: async () => {},
+};
+
+const AuthContext = createContext<AuthContextType>(defaultContextValue);
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
   return context;
 };
 
