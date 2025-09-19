@@ -2,13 +2,18 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "site1.myapp.vercel.app" }],
+      "has": [
+        { "type": "host", "value": "site1.site-whisper-hub.vercel.app" }
+      ],
       "destination": "/site1/$1"
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "site2.myapp.vercel.app" }],
+      "has": [
+        { "type": "host", "value": "site2.site-whisper-hub.vercel.app" }
+      ],
       "destination": "/site2/$1"
     }
+    // add more for site3, site4, etc.
   ]
 }
